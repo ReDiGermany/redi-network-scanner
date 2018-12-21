@@ -8,29 +8,28 @@ Only tested on Raspberry Pi Zero W on NodeJS Version `v10.14.2`
 ---
 ## API
 ###### Configuration
-name|description|default|type|info
+name|type|default|description|info
 --- | --- | --- | --- | ---
-suffix|your network suffix|.fritz.box|string|
-test|shows ur network scan unparsed|function|
-ip|lets you define a fixed ip (faster on startup)|`gets loaded`|string|
-debug|some debug logging|false|bool|
-offlinetimeout|time when the `offline` event should get fired|5*60|int|in seconds
-scaninterval|check interval|1|int|in seconds
+suffix|string|.fritz.box|your network suffix|
+test|function||shows ur network scan unparsed
+ip|string|`gets loaded`|lets you define a fixed ip (faster on startup)|
+debug|bool|false|some debug logging|
+offlinetimeout|int|5*60|time when the `offline` event should get fired|in seconds
+scaninterval|int|1|check interval|in seconds
 ###### Events
-name|description
---- | ---
-error|displays some errors
-online|fired when a new device is in your network
-offline|fired when a device disconnected
-back|fired when the disconnect timeout gets canceled
-lost|fired when the device is lost. disconnect timeout gets started here
+name|description|response
+--- | --- | ---
+error|displays some errors|
+online|fired when a new device is in your network|{ ip:'xxx.xxx.xxx.xxx', name: 'xyz' }
+offline|fired when a device disconnected|{ ip:'xxx.xxx.xxx.xxx', name: 'xyz' }
+back|fired when the disconnect timeout gets canceled|{ ip: 'xxx.xxx.xxx.xxx', name: 'xyz', time: MOMENTS_STRING }
+lost|fired when the device is lost. disconnect timeout gets started here|{ ip: 'xxx.xxx.xxx.xxx', name: 'xyz', time: MOMENTS_STRING }
 list|initial list of known devices
 init|initial function with your config (optional)
 ---
 Full example as in [`example.js`](https://github.com/ReDiGermany/redi-network-scanner/blob/master/example.js)
 ```javascript
-const ns = require('./index.js')
-// const ns = require('redi-network-scanner')
+const ns = require('redi-network-scanner')
 ns.error(data => { console.log(`error`,data) })
 ns.online(data => { console.log(`online`,data) })
 ns.offline(data => { console.log(`offline`,data) })
