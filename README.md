@@ -2,7 +2,7 @@
 ###### the simple way to keep your network devices in focus
 Install via NPM:
 ```npm
-npm i network-scanner --save
+npm i redi-network-scanner --save
 ```
 Only tested on Raspberry Pi Zero W on NodeJS Version `v10.14.2`
 ---
@@ -27,7 +27,7 @@ lost|fired when the device is lost. disconnect timeout gets started here
 list|initial list of known devices
 init|initial function with your config (optional)
 ---
-Full example as in [`example.js`](https://github.com/ReDiGermany/network-scanner/blob/master/example.js)
+Full example as in [`example.js`](https://github.com/ReDiGermany/redi-network-scanner/blob/master/example.js)
 ```javascript
 const ns = require('./index.js')
 // const ns = require('redi-network-scanner')
