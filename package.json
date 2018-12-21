@@ -1,0 +1,41 @@
+{
+  "name": "redi-network-scanner",
+  "version": "1.0.0",
+  "description": "NodeJS module to scan computers in your network.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ReDiGermany/redi-network-scanner.git"
+  },
+  "keywords": [
+    "node",
+    "nodejs",
+    "exec",
+    "moment",
+    "momentjs",
+    "events",
+    "network",
+    "scanner",
+    "scan",
+    "network-scanner",
+    "redi",
+    "redigermany",
+    "max",
+    "kruggel",
+    "real",
+    "time"
+  ],
+  "author": "ReDiGermany",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ReDiGermany/redi-network-scanner/issues"
+  },
+  "homepage": "https://github.com/ReDiGermany/redi-network-scanner#readme",
+  "dependencies": {
+    "events": "^3.0.0",
+    "moment": "^2.23.0"
+  }
+}
